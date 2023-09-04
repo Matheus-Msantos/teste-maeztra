@@ -1,0 +1,147 @@
+.mz-popup {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.70);
+    z-index: 3;
+  }
+
+  &__container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $color-white;
+    width: 848px;
+    height: 529px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+
+    img {
+      width: 426px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: -28px;
+    background: transparent;
+    color: $color-white;
+    font-size: 12px;
+    border: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  &__form {
+    margin-right: 52px;
+    &-welcome {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        display: block;
+        margin-top: 12px;
+        color: #464B54;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+
+    &-title {
+      width: 260px;
+      color: #787D83;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 12px auto 25px auto;
+      line-height: 23px;
+
+      span {
+        display: block;
+        color: #787D83;
+        font-weight: 400;
+      }
+    }
+
+    &-content {
+      width: 322px;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        border: 1px solid #C4C4C4;
+        height: 40px;
+        border-radius: 10px;
+        padding-left: 13px;
+        color: #787D83;
+        margin-bottom: 12px;
+        outline: none;
+
+        &::placeholder {
+          color: #787D83;
+        }
+      }
+
+      button {
+        background: $color-secundary;
+        border: 0;
+        border-radius: 10px;
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 12px;
+        height: 40px;
+        cursor: pointer;
+
+        svg {
+          margin-left: 8px;
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 780px) {
+    &__container {
+      width: 83%;
+      height: 307px;
+      justify-content: center;
+
+      img {
+        display: none;
+      }
+    }
+
+    &__form {
+      width: 100%;
+      margin-right: 0;
+
+      &-welcome {
+        svg {
+          width: 28px;
+        }
+      }
+
+      &-title {
+        width: 90%;
+        font-size: 16px;
+      }
+
+      &-content {
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+
+  }
+}
