@@ -10,4 +10,4 @@ obs: Os protótipos do figma foram desenvolvidos em telas de 1920px, testar em t
 
 - Em seguida insere o comando `npm start` para inciar o Gulp
 
-- Depois entre na pasta `src/` e abra o `index.html` em seu navegador
+- Depois abra o `index.html` em seu navegador

@@ -11,7 +11,7 @@ gulp.task('compilar-scss', function () {
       console.log(err);
     }))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('css'))
 });
 
 gulp.task('monitorar', function () {
